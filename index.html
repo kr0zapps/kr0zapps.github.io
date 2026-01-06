@@ -1,108 +1,98 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kr0zapps | Innovación Móvil</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            color: var(--primary);
-            background-color: #f4f7f6;
-        }
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: -40px;
-        }
-        .app-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .app-card:hover { transform: translateY(-10px); }
-        .icon {
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        .btn-accent { background: var(--accent); }
-        footer {
-            margin-top: 50px;
-            padding: 40px;
-            background: #ddd;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .legal-links a {
-            margin: 0 10px;
-            color: #666;
-            text-decoration: none;
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="text-slate-200 min-h-screen flex flex-col antialiased selection:bg-indigo-500/30">
 
-<header>
-    <h1>kr0zapps</h1>
-    <p>Desarrollo de herramientas útiles y seguras para Chile</p>
-</header>
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 px-4 text-center relative z-10">
+        <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-6">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-200 to-indigo-400 drop-shadow-sm">
+                kr0zapps
+            </span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-normal tracking-wide">
+            Desarrollo móvil y web
+        </p>
+    </header>
 
-<div class="container">
-    <div class="app-grid">
-        <div class="app-card">
-            <div class="icon">🚫</div>
-            <h2>Cállate 600/809</h2>
-            <p>Bloqueo automático e inteligente de spam telefónico en Chile. Recupera tu tranquilidad sin compartir tus datos.</p>
-            <span class="btn btn-accent">Próximamente en Google Play</span>
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 pb-20 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <!-- Card 1: Cállate -->
+            <div class="group relative rounded-3xl bg-slate-900/40 border border-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-slate-800/60 hover:border-white/20 hover:shadow-2xl hover:shadow-orange-500/10">
+                
+                <div class="relative z-10 flex flex-col h-full items-start">
+                    <img src="assets/logo2.jpg" alt="Logo Cállate" class="w-24 h-24 rounded-2xl shadow-lg mb-6 object-cover border border-white/10 bg-slate-800">
+                    
+                    <h2 class="text-2xl font-bold text-white mb-3 tracking-tight">Cállate 600/809</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed font-light">
+                        Bloqueo automático e inteligente de spam telefónico en Chile. Recupera tu tranquilidad sin compartir tus datos.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <a href="https://play.google.com/store/apps/details?id=com.kr0zapps.callatespam" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all duration-300 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl shadow-lg shadow-orange-900/20 hover:shadow-orange-500/40 hover:scale-105 hover:from-orange-400 hover:to-red-500">
+                            Disponible en Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: FitGamer -->
+            <div class="group relative rounded-3xl bg-slate-900/40 border border-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-slate-800/60 hover:border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10">
+                
+                <div class="relative z-10 flex flex-col h-full items-start">
+                    <img src="assets/logo1.png" alt="Logo FitGamer" class="w-24 h-24 rounded-2xl shadow-lg mb-6 object-cover border border-white/10 bg-slate-800/50">
+                    
+                    <h2 class="text-2xl font-bold text-white mb-3 tracking-tight">FitGamer</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed font-light">
+                        La combinación perfecta entre gaming y salud. Mantén tu rendimiento al máximo nivel.
+                    </p>
+                    
+                    <div class="mt-auto">
+                        <a href="https://play.google.com/store/apps/details?id=com.fitgamer.app" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all duration-300 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl shadow-lg shadow-indigo-900/20 hover:shadow-indigo-500/40 hover:scale-105 hover:from-indigo-500 hover:to-violet-500">
+                            Disponible en Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </main>
 
-        <div class="app-card">
-            <div class="icon">🎮</div>
-            <h2>FitGamer</h2>
-            <p>La combinación perfecta entre gaming y salud. Mantén tu rendimiento al máximo nivel.</p>
-            <span class="btn">En desarrollo</span>
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-white/5 relative z-10">
+        <p class="text-slate-400 text-sm mb-2">&copy; 2026 kr0zapps - Todos los derechos reservados.</p>
+        <div class="text-xs text-slate-500 font-medium">
+            <a href="app-ads.txt" class="hover:text-white transition-colors">AdMob Verified</a>
+            <span class="mx-2 text-slate-600">•</span>
+            <a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
         </div>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 kr0zapps - Todos los derechos reservados.</p>
-    <div class="legal-links">
-        <a href="app-ads.txt">AdMob Verified (app-ads.txt)</a> | 
-        <a href="privacidad.html">Política de Privacidad</a>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
