@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kr0zapps | Innovación Móvil</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--primary);
+            background-color: #f4f7f6;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: -40px;
+        }
+        .app-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .app-card:hover { transform: translateY(-10px); }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .btn-accent { background: var(--accent); }
+        footer {
+            margin-top: 50px;
+            padding: 40px;
+            background: #ddd;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .legal-links a {
+            margin: 0 10px;
+            color: #666;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>kr0zapps</h1>
+    <p>Desarrollo de herramientas útiles y seguras para Chile</p>
+</header>
+
+<div class="container">
+    <div class="app-grid">
+        <div class="app-card">
+            <div class="icon">🚫</div>
+            <h2>Cállate 600/809</h2>
+            <p>Bloqueo automático e inteligente de spam telefónico en Chile. Recupera tu tranquilidad sin compartir tus datos.</p>
+            <span class="btn btn-accent">Próximamente en Google Play</span>
+        </div>
+
+        <div class="app-card">
+            <div class="icon">🎮</div>
+            <h2>FitGamer</h2>
+            <p>La combinación perfecta entre gaming y salud. Mantén tu rendimiento al máximo nivel.</p>
+            <span class="btn">En desarrollo</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 kr0zapps - Todos los derechos reservados.</p>
+    <div class="legal-links">
+        <a href="app-ads.txt">AdMob Verified (app-ads.txt)</a> | 
+        <a href="privacidad.html">Política de Privacidad</a>
+    </div>
+</footer>
+
+</body>
+</html>
